@@ -1,0 +1,10 @@
+#sidepanel {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+#main {
+  margin-left: 250px;
+}
