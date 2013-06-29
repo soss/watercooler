@@ -2,12 +2,11 @@ Template.messageForm.events({
   'submit form': function (e) {
     e.preventDefault();
 
-    messageProperties = {
-      username: Meteor.user().username,
+    message = {
       content: $(e.target).find('[name=content]').val()
     };
 
-    Messages.insert(messageProperties , function (error) {
+    Meteor.call('message', message, function (error, id) {
       if (error)
         alert(error.reason)
       else
