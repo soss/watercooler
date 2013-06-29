@@ -1,10 +1,66 @@
+body {
+  color: #444;
+  background-color: #fff;
+
+  margin: 0;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 #sidepanel {
+  background-color: #f1f0d5;
+
+  padding: 20px;
   width: 250px;
   position: absolute;
   top: 0;
   bottom: 0;
+  background-color: ;
+}
+
+.brand {
+  color: #305691;
 }
 
 #main {
-  margin-left: 250px;
+  padding: 20px;
+  margin-left: 300px;
+}
+
+.messages-wrapper {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.messages {
+  min-height: 430px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.message {
+  font-size: 14px;
+}
+
+.message-user {
+  float: left;
+  text-align: right;
+  width: 80px;
+  background-color: #bed1e9;
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  border-top: 1px solid #bed1e9;
+}
+
+.message-content {
+  margin-left: 90px;
+  padding: 5px;
+
+  border-top: 1px solid #ccc;
+}
+
+.message-form input[type=text] {
+  width: 600px;
 }
