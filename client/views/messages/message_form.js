@@ -3,7 +3,7 @@ Template.messageForm.events({
     e.preventDefault();
 
     messageProperties = {
-      username: 'Jordan',
+      username: Meteor.user().username,
       content: $(e.target).find('[name=content]').val()
     };
 
