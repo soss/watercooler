@@ -5,6 +5,7 @@ var watercoolerFeatureSet = function (string) {
     .escapeTags()
     .markdownBold()
     .markdownItalic()
+    .createImages()
 };
 
 Meteor.methods({

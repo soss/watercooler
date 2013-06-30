@@ -64,3 +64,7 @@ body {
 .message-form input[type=text] {
   width: 600px;
 }
+
+.message-img {
+  max-width: 300px;
+}
