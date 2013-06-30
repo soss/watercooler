@@ -6,7 +6,7 @@ Template.messageForm.events({
       content: $(e.target).find('[name=content]').val()
     };
 
-    if (message.content) {
+    if (!/^\s*$/.test(message.content)) {
       Meteor.call('message', message, function (error, id) {
         if (error)
           alert(error.reason)

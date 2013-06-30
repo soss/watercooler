@@ -18,7 +18,7 @@ Meteor.methods({
       throw new Meteor.Error(401, "You need to login to send a message");
 
     // ensure the message has content
-    if (!messageAttributes.content)
+    if (/^\s*$/.test(messageAttributes.content))
       throw new Meteor.Error(422, "Please fill in a message");
 
     // Render the markup for content (markdown, images, emoji, etc...)
