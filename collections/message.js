@@ -1,19 +1,5 @@
 Messages = new Meteor.Collection('messages');
 
-var watercoolerFeatureSet = function (string) {
-  // first pad the string with spaces to handle
-  // super janky word-border detection in regex
-  return (' ' + string + ' ')
-    .escapeTags()
-    .markdownBold()
-    .markdownItalic()
-    .createImages()
-    .createLinks()
-    .emojify()
-    .createSwatches()
-    .createMurrays()
-};
-
 Messages.allow({
   remove: function (userId, message) {
     return userId === message.userId;
@@ -32,15 +18,15 @@ Meteor.methods({
     if (/^\s*$/.test(messageAttributes.content))
       throw new Meteor.Error(422, "Please fill in a message");
 
-    // Render the markup for content (markdown, images, emoji, etc...)
-    messageAttributes.content = watercoolerFeatureSet(messageAttributes.content)
-
-    // pick out the whitelisted keys
-    var message = _.extend(_.pick(messageAttributes, 'content'), {
+    // build the message
+    var message = {
+      // watercoolerFeatures() includes markdown, images, emoji, etc.
+      // see `client/helpers/string.js` for details
+      content: messageAttributes.content.watercoolerFeatures(),
       userId: user._id,
       username: user.username,
       submitted: new Date().getTime()
-    });
+    };
 
     Messages.insert(message);
   }
