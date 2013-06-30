@@ -6,6 +6,7 @@ var watercoolerFeatureSet = function (string) {
     .markdownBold()
     .markdownItalic()
     .createImages()
+    .emojify()
 };
 
 Meteor.methods({

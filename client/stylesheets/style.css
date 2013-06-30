@@ -70,3 +70,7 @@ body {
   display: block;
   margin-top: 5px;
 }
+
+.message-emoji {
+  max-width: 20px;
+}
