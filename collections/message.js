@@ -1,11 +1,14 @@
 Messages = new Meteor.Collection('messages');
 
 var watercoolerFeatureSet = function (string) {
-  return string
+  // first pad the string with spaces to handle
+  // super janky word-border detection in regex
+  return (' ' + string + ' ')
     .escapeTags()
     .markdownBold()
     .markdownItalic()
     .createImages()
+    .createLinks()
     .emojify()
     .createSwatches()
 };
