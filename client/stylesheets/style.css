@@ -75,7 +75,8 @@ body {
 /* MESSAGE FEATURES */
 
 .message-img {
-  max-width: 300px;
+  height: 200px;
+  max-height: 200px;
   display: block;
   margin-top: 5px;
 }
