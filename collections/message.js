@@ -7,6 +7,7 @@ var watercoolerFeatureSet = function (string) {
     .markdownItalic()
     .createImages()
     .emojify()
+    .createSwatches()
 };
 
 Messages.allow({

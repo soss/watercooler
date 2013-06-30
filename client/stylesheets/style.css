@@ -36,6 +36,8 @@ body {
   overflow-y: scroll;
 }
 
+/* MESSAGES */
+
 .messages {
   min-height: 430px;
   padding: 10px 0;
@@ -74,6 +76,8 @@ body {
   width: 600px;
 }
 
+/* MESSAGE FEATURES */
+
 .message-img {
   max-width: 300px;
   display: block;
@@ -84,13 +88,20 @@ body {
   max-width: 20px;
 }
 
-.clear {
-  clear: both;
+.message-swatch {
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  border: 1px solid #ccc;
 }
 
-.right {
-  float: right;
-}
+/* LINKS */
 
 a, a:visited {
   color: #305691;
@@ -108,4 +119,18 @@ a.delete {
 
 a.delete:hover {
   color: #db5e67;
+}
+
+/* MISC */
+
+.clear {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.upper {
+  text-transform: uppercase;
 }
