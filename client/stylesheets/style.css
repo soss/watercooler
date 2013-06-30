@@ -98,6 +98,11 @@ body {
   border: 1px solid #ccc;
 }
 
+.message-code {
+  font-family: monospace;
+  background-color: #ddd;
+}
+
 /* LINKS */
 
 a, a:visited {
