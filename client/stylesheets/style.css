@@ -78,3 +78,25 @@ body {
 .clear {
   clear: both;
 }
+
+.right {
+  float: right;
+}
+
+a, a:visited {
+  color: #305691;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bed1e9;
+}
+
+a.delete {
+  color: #bb3e47;
+  font-size: 12px;
+}
+
+a.delete:hover {
+  color: #db5e67;
+}

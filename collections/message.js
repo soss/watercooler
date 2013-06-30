@@ -9,6 +9,12 @@ var watercoolerFeatureSet = function (string) {
     .emojify()
 };
 
+Messages.allow({
+  remove: function (userId, message) {
+    return userId === message.userId;
+  }
+});
+
 Meteor.methods({
   message: function (messageAttributes) {
     var user = Meteor.user()

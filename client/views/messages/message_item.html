@@ -5,6 +5,9 @@
     </div>
     <div class="message-content">
       {{{content}}}
+      {{#if ownMessage}}
+        <a class="right delete" href="#">delete</a>
+      {{/if}}
     </div>
     <div class="clear"></div>
   </div>
