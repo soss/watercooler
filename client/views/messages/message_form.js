@@ -7,11 +7,10 @@ Template.messageForm.events({
     };
 
     if (!/^\s*$/.test(message.content)) {
+      $(e.target).find('[name=content]').val('')
       Meteor.call('message', message, function (error, id) {
         if (error)
           alert(error.reason)
-        else
-          $(e.target).find('[name=content]').val('')
       });
     }
   }
