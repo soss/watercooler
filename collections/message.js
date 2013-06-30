@@ -11,6 +11,7 @@ var watercoolerFeatureSet = function (string) {
     .createLinks()
     .emojify()
     .createSwatches()
+    .createMurrays()
 };
 
 Messages.allow({
