@@ -49,22 +49,18 @@ body {
 }
 
 .message-user {
-  float: left;
   text-align: right;
-  width: 80px;
   background-color: #bed1e9;
   padding: 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  border-top: 1px solid #bed1e9;
+  width: 90px;
+  vertical-align: top;
+  font-weight: bold;
+  border-bottom: 1px solid #bed1e9;
 }
 
 .message-content {
-  margin-left: 90px;
   padding: 5px;
-
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .message-form {

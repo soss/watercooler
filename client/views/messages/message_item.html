@@ -1,14 +1,13 @@
 <template name="message">
-  <div class="message">
-    <div class="message-user">
+  <tr class="message">
+    <td class="message-user">
       {{username}}
-    </div>
-    <div class="message-content">
+    </td>
+    <td class="message-content">
       {{#if ownMessage}}
         <a class="right delete" href="#">delete</a>
       {{/if}}
       {{{content}}}
-    </div>
-    <div class="clear"></div>
-  </div>
+    </td>
+  </tr>
 </template>
