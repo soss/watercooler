@@ -67,4 +67,6 @@ body {
 
 .message-img {
   max-width: 300px;
+  display: block;
+  margin-top: 5px;
 }
