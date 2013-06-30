@@ -1,5 +1,12 @@
 Messages = new Meteor.Collection('messages');
 
+var watercoolerFeatureSet = function (string) {
+  return string
+    .escapeTags()
+    .markdownBold()
+    .markdownItalic()
+};
+
 Meteor.methods({
   message: function (messageAttributes) {
     var user = Meteor.user()
@@ -12,7 +19,8 @@ Meteor.methods({
     if (!messageAttributes.content)
       throw new Meteor.Error(422, "Please fill in a message");
 
-    // TODO(jordan) render the markup for content (markdown, images, emoji, etc...)
+    // Render the markup for content (markdown, images, emoji, etc...)
+    messageAttributes.content = watercoolerFeatureSet(messageAttributes.content)
 
     // pick out the whitelisted keys
     var message = _.extend(_.pick(messageAttributes, 'content'), {
