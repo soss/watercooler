@@ -1,7 +1,7 @@
 <template name="message">
-  <tr class="message {{#if ownMessage}}me{{/if}}">
+  <tr class="message{{#if ownMessage}} me{{/if}}{{#if selectedUserMessage}} selected{{/if}}">
     <td class="message-user">
-      {{username}}
+      <a href="#" class="user-select">{{username}}</a>
     </td>
     <td class="message-content">
       {{#if ownMessage}}

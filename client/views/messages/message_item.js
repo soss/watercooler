@@ -5,6 +5,10 @@ Template.message.rendered = function () {
 Template.message.helpers({
   ownMessage: function () {
     return this.userId == Meteor.userId();
+  },
+
+  selectedUserMessage: function () {
+    return this.username == Session.get('selectedUser');
   }
 });
 

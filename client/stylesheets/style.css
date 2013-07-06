@@ -53,6 +53,11 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+.message.selected .message-content {
+  background-color: #e1eaf5;
+  border-bottom: 1px solid #ccc;
+}
+
 .message-user {
   text-align: right;
   background-color: #bed1e9;
@@ -117,6 +122,15 @@ a, a:visited {
 
 a:hover {
   color: #bed1e9;
+}
+
+a.user-select {
+  font-weight: bold;
+  color: #444;
+}
+
+a.user-select:hover {
+  color: #777;
 }
 
 a.delete {
