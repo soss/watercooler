@@ -1,5 +1,5 @@
 <template name="message">
-  <tr class="message">
+  <tr class="message {{#if ownMessage}}me{{/if}}">
     <td class="message-user">
       {{username}}
     </td>

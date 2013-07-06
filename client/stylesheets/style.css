@@ -48,6 +48,11 @@ body {
   font-size: 14px;
 }
 
+.message.me .message-content {
+  background-color: #f6f5e4;
+  border-bottom: 1px solid #ccc;
+}
+
 .message-user {
   text-align: right;
   background-color: #bed1e9;
